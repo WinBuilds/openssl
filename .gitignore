@@ -168,6 +168,7 @@ Makefile
 *.def
 *.rc
 *.res
+*.db
 
 # Misc generated stuff
 Makefile.save
@@ -178,7 +179,13 @@ Makefile.save
 cscope.*
 *.d
 pod2htmd.tmp
+.vs/
+*.VC.db
+*.VC.opendb
 
 # Windows manifest files
 *.manifest
 doc-nits
+
+# Windows Explorer link files
+*.lnk

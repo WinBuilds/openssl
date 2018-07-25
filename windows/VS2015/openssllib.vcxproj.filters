@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ssl">
+      <UniqueIdentifier>{e80f545a-37fc-410a-8ef8-037866ecd8d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ssl\statem">
+      <UniqueIdentifier>{a0f9a4ef-2e50-40fb-a4b9-0b2ac4cf63db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ssl\record">
+      <UniqueIdentifier>{44f22ce4-f368-4fb8-a69a-b715b301a1ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ssl\bio_ssl.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\d1_lib.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\d1_msg.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\d1_srtp.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\methods.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\packet.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\pqueue.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\s3_cbc.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\s3_enc.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\s3_lib.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\s3_msg.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_asn1.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_cert.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_ciph.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_conf.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_err.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_init.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_lib.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_mcnf.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_rsa.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_sess.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_stat.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_txt.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\ssl_utst.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\t1_enc.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\t1_lib.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\t1_trce.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\tls_srp.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\tls13_enc.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\record\dtls1_bitmap.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\record\rec_layer_d1.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\record\rec_layer_s3.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\record\ssl3_buffer.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\record\ssl3_record.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\record\ssl3_record_tls13.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\extensions.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\extensions_clnt.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\extensions_cust.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\extensions_srvr.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\statem.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\statem_clnt.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\statem_dtls.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\statem_lib.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ssl\statem\statem_srvr.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ssl\packet_locl.h">
+      <Filter>ssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ssl\ssl_cert_table.h">
+      <Filter>ssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ssl\ssl_locl.h">
+      <Filter>ssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ssl\record\record.h">
+      <Filter>ssl\record</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ssl\record\record_locl.h">
+      <Filter>ssl\record</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ssl\statem\statem.h">
+      <Filter>ssl\statem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ssl\statem\statem_locl.h">
+      <Filter>ssl\statem</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

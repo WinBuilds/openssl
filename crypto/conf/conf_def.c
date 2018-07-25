@@ -424,26 +424,12 @@ static int def_load_bio(CONF *conf, BIO *in, long *line)
     }
     BUF_MEM_free(buff);
     OPENSSL_free(section);
-    /*
-     * No need to pop, since we only get here if the stack is empty.
-     * If this causes a BIO leak, THE ISSUE IS SOMEWHERE ELSE!
-     */
-    sk_BIO_free(biosk);
+    sk_BIO_pop_free(biosk, BIO_vfree);
     return 1;
  err:
     BUF_MEM_free(buff);
     OPENSSL_free(section);
-    /*
-     * Since |in| is the first element of the stack and should NOT be freed
-     * here, we cannot use sk_BIO_pop_free().  Instead, we pop and free one
-     * BIO at a time, making sure that the last one popped isn't.
-     */
-    while (sk_BIO_num(biosk) > 0) {
-        BIO *popped = sk_BIO_pop(biosk);
-        BIO_vfree(in);
-        in = popped;
-    }
-    sk_BIO_free(biosk);
+    sk_BIO_pop_free(biosk, BIO_vfree);
 #ifndef OPENSSL_NO_POSIX_IO
     OPENSSL_free(dirpath);
     if (dirctx != NULL)
