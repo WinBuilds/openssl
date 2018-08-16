@@ -106,7 +106,7 @@
       <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl"
 xcopy "$(SolutionDir)..\..\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D
 xcopy "$(SolutionDir)..\..\generated_win32\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D</Command>
-      <Message>copying header files..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -130,7 +130,7 @@ xcopy "$(SolutionDir)..\..\generated_win32\include\openssl" "$(SolutionDir)..\..
       <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl"
 xcopy "$(SolutionDir)..\..\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D
 xcopy "$(SolutionDir)..\..\generated_win64A\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D</Command>
-      <Message>copying header files..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -158,7 +158,7 @@ xcopy "$(SolutionDir)..\..\generated_win64A\include\openssl" "$(SolutionDir)..\.
       <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl"
 xcopy "$(SolutionDir)..\..\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D
 xcopy "$(SolutionDir)..\..\generated_win32\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D</Command>
-      <Message>copying header files..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -186,7 +186,7 @@ xcopy "$(SolutionDir)..\..\generated_win32\include\openssl" "$(SolutionDir)..\..
       <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl"
 xcopy "$(SolutionDir)..\..\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D
 xcopy "$(SolutionDir)..\..\generated_win64A\include\openssl" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\openssl\" /E /I /R /Y /D</Command>
-      <Message>copying header files..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
