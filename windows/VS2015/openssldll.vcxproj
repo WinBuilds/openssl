@@ -98,6 +98,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win32\;$(SolutionDir)..\..\generated_win32\include\;$(SolutionDir)..\..\generated_win32\crypto\;$(SolutionDir)..\..\generated_win32\crypto\include\;$(SolutionDir)..\..\generated_win32\crypto\modes\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -118,6 +119,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win64A\;$(SolutionDir)..\..\generated_win64A\include\;$(SolutionDir)..\..\generated_win64A\crypto\;$(SolutionDir)..\..\generated_win64A\crypto\include\;$(SolutionDir)..\..\generated_win64A\crypto\modes\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

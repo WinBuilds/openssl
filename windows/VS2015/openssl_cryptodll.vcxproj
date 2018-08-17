@@ -97,6 +97,7 @@
       <PreprocessorDefinitions>L_ENDIAN;WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;OPENSSL_CRYPTODLL_EXPORTS;OPENSSL_SYS_WIN32;OPENSSL_THREADS;OPENSSL_NO_STATIC_ENGINE;WIN32_LEAN_AND_MEAN;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;ENGINESDIR="../../../../build_msvc14_$(Platform)/$(Configuration)/bin/engines/";OPENSSLDIR="../../../../build_msvc14_$(Platform)/$(Configuration)/bin/";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win32\;$(SolutionDir)..\..\generated_win32\include\;$(SolutionDir)..\..\generated_win32\crypto\;$(SolutionDir)..\..\generated_win32\crypto\include\;$(SolutionDir)..\..\generated_win32\crypto\modes\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -114,6 +115,7 @@
       <PreprocessorDefinitions>L_ENDIAN;_DEBUG;DEBUG;_WINDOWS;_USRDLL;OPENSSL_CRYPTODLL_EXPORTS;OPENSSL_SYS_WIN32;OPENSSL_THREADS;OPENSSL_NO_STATIC_ENGINE;WIN32_LEAN_AND_MEAN;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;ENGINESDIR="../../../../build_msvc14_$(Platform)/$(Configuration)/bin/engines/";OPENSSLDIR="../../../../build_msvc14_$(Platform)/$(Configuration)/bin/";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win64A\;$(SolutionDir)..\..\generated_win64A\include\;$(SolutionDir)..\..\generated_win64A\crypto\;$(SolutionDir)..\..\generated_win64A\crypto\include\;$(SolutionDir)..\..\generated_win64A\crypto\modes\</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
