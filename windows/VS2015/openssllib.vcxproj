@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B426D55F-4097-4E0F-84CF-6EFDB7512734}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>openssl</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>openssllib</ProjectName>
+    <ProjectRoot>$(WINBUILDS_ROOT)</ProjectRoot>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;_WINDOWS;_LIB;OPENSSL_SYS_WIN32;WIN32_LEAN_AND_MEAN;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win32\;$(SolutionDir)..\..\generated_win32\include\;$(SolutionDir)..\..\generated_win32\crypto\;$(SolutionDir)..\..\generated_win32\crypto\include\;$(SolutionDir)..\..\generated_win32\crypto\modes\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;DEBUG;_WINDOWS;_LIB;OPENSSL_SYS_WIN32;WIN32_LEAN_AND_MEAN;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win64A\;$(SolutionDir)..\..\generated_win64A\include\;$(SolutionDir)..\..\generated_win64A\crypto\;$(SolutionDir)..\..\generated_win64A\crypto\include\;$(SolutionDir)..\..\generated_win64A\crypto\modes\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_LIB;OPENSSL_SYS_WIN32;WIN32_LEAN_AND_MEAN;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win32\;$(SolutionDir)..\..\generated_win32\include\;$(SolutionDir)..\..\generated_win32\crypto\;$(SolutionDir)..\..\generated_win32\crypto\include\;$(SolutionDir)..\..\generated_win32\crypto\modes\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_LIB;OPENSSL_SYS_WIN32;WIN32_LEAN_AND_MEAN;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\;$(SolutionDir)..\..\include\;$(SolutionDir)..\..\crypto\;$(SolutionDir)..\..\crypto\include\;$(SolutionDir)..\..\crypto\modes\;$(SolutionDir)..\..\crypto\ec\curve448\;$(SolutionDir)..\..\crypto\ec\curve448\arch_32\;$(SolutionDir)..\..\generated_win64A\;$(SolutionDir)..\..\generated_win64A\include\;$(SolutionDir)..\..\generated_win64A\crypto\;$(SolutionDir)..\..\generated_win64A\crypto\include\;$(SolutionDir)..\..\generated_win64A\crypto\modes\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ssl\bio_ssl.c" />
+    <ClCompile Include="..\..\ssl\d1_lib.c" />
+    <ClCompile Include="..\..\ssl\d1_msg.c" />
+    <ClCompile Include="..\..\ssl\d1_srtp.c" />
+    <ClCompile Include="..\..\ssl\methods.c" />
+    <ClCompile Include="..\..\ssl\packet.c" />
+    <ClCompile Include="..\..\ssl\pqueue.c" />
+    <ClCompile Include="..\..\ssl\record\dtls1_bitmap.c" />
+    <ClCompile Include="..\..\ssl\record\rec_layer_d1.c" />
+    <ClCompile Include="..\..\ssl\record\rec_layer_s3.c" />
+    <ClCompile Include="..\..\ssl\record\ssl3_buffer.c" />
+    <ClCompile Include="..\..\ssl\record\ssl3_record.c" />
+    <ClCompile Include="..\..\ssl\record\ssl3_record_tls13.c" />
+    <ClCompile Include="..\..\ssl\s3_cbc.c" />
+    <ClCompile Include="..\..\ssl\s3_enc.c" />
+    <ClCompile Include="..\..\ssl\s3_lib.c" />
+    <ClCompile Include="..\..\ssl\s3_msg.c" />
+    <ClCompile Include="..\..\ssl\ssl_asn1.c" />
+    <ClCompile Include="..\..\ssl\ssl_cert.c" />
+    <ClCompile Include="..\..\ssl\ssl_ciph.c" />
+    <ClCompile Include="..\..\ssl\ssl_conf.c" />
+    <ClCompile Include="..\..\ssl\ssl_err.c" />
+    <ClCompile Include="..\..\ssl\ssl_init.c" />
+    <ClCompile Include="..\..\ssl\ssl_lib.c" />
+    <ClCompile Include="..\..\ssl\ssl_mcnf.c" />
+    <ClCompile Include="..\..\ssl\ssl_rsa.c" />
+    <ClCompile Include="..\..\ssl\ssl_sess.c" />
+    <ClCompile Include="..\..\ssl\ssl_stat.c" />
+    <ClCompile Include="..\..\ssl\ssl_txt.c" />
+    <ClCompile Include="..\..\ssl\ssl_utst.c" />
+    <ClCompile Include="..\..\ssl\statem\extensions.c" />
+    <ClCompile Include="..\..\ssl\statem\extensions_clnt.c" />
+    <ClCompile Include="..\..\ssl\statem\extensions_cust.c" />
+    <ClCompile Include="..\..\ssl\statem\extensions_srvr.c" />
+    <ClCompile Include="..\..\ssl\statem\statem.c" />
+    <ClCompile Include="..\..\ssl\statem\statem_clnt.c" />
+    <ClCompile Include="..\..\ssl\statem\statem_dtls.c" />
+    <ClCompile Include="..\..\ssl\statem\statem_lib.c" />
+    <ClCompile Include="..\..\ssl\statem\statem_srvr.c" />
+    <ClCompile Include="..\..\ssl\t1_enc.c" />
+    <ClCompile Include="..\..\ssl\t1_lib.c" />
+    <ClCompile Include="..\..\ssl\t1_trce.c" />
+    <ClCompile Include="..\..\ssl\tls13_enc.c" />
+    <ClCompile Include="..\..\ssl\tls_srp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ssl\packet_locl.h" />
+    <ClInclude Include="..\..\ssl\record\record.h" />
+    <ClInclude Include="..\..\ssl\record\record_locl.h" />
+    <ClInclude Include="..\..\ssl\ssl_cert_table.h" />
+    <ClInclude Include="..\..\ssl\ssl_locl.h" />
+    <ClInclude Include="..\..\ssl\statem\statem.h" />
+    <ClInclude Include="..\..\ssl\statem\statem_locl.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

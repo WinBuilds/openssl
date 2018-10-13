@@ -1,16 +1,11 @@
 /*
- * Copyright 2001-2016 The OpenSSL Project Authors. All Rights Reserved.
+ * Copyright 2001-2018 The OpenSSL Project Authors. All Rights Reserved.
+ * Copyright (c) 2002, Oracle and/or its affiliates. All rights reserved
  *
  * Licensed under the OpenSSL license (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
- */
-
-/* ====================================================================
- * Copyright 2002 Sun Microsystems, Inc. ALL RIGHTS RESERVED.
- * Portions of this software developed by SUN MICROSYSTEMS, INC.,
- * and contributed to the OpenSSL project.
  */
 
 #include <openssl/err.h>
@@ -67,7 +62,12 @@ const EC_METHOD *EC_GFp_simple_method(void)
         ec_key_simple_generate_public_key,
         0, /* keycopy */
         0, /* keyfinish */
-        ecdh_simple_compute_key
+        ecdh_simple_compute_key,
+        0, /* field_inverse_mod_ord */
+        ec_GFp_simple_blind_coordinates,
+        0, /* ladder_pre */
+        0, /* ladder_step */
+        0 /* ladder_post */
     };
 
     return &ret;
@@ -1219,7 +1219,7 @@ int ec_GFp_simple_points_make_affine(const EC_GROUP *group, size_t num,
     BN_CTX_start(ctx);
     tmp = BN_CTX_get(ctx);
     tmp_Z = BN_CTX_get(ctx);
-    if (tmp == NULL || tmp_Z == NULL)
+    if (tmp_Z == NULL)
         goto err;
 
     prod_Z = OPENSSL_malloc(num * sizeof(prod_Z[0]));
@@ -1367,4 +1367,57 @@ int ec_GFp_simple_field_sqr(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
                             BN_CTX *ctx)
 {
     return BN_mod_sqr(r, a, group->field, ctx);
+}
+
+/*-
+ * Apply randomization of EC point projective coordinates:
+ *
+ *   (X, Y ,Z ) = (lambda^2*X, lambda^3*Y, lambda*Z)
+ *   lambda = [1,group->field)
+ *
+ */
+int ec_GFp_simple_blind_coordinates(const EC_GROUP *group, EC_POINT *p,
+                                    BN_CTX *ctx)
+{
+    int ret = 0;
+    BIGNUM *lambda = NULL;
+    BIGNUM *temp = NULL;
+
+    BN_CTX_start(ctx);
+    lambda = BN_CTX_get(ctx);
+    temp = BN_CTX_get(ctx);
+    if (temp == NULL) {
+        ECerr(EC_F_EC_GFP_SIMPLE_BLIND_COORDINATES, ERR_R_MALLOC_FAILURE);
+        goto err;
+    }
+
+    /* make sure lambda is not zero */
+    do {
+        if (!BN_priv_rand_range(lambda, group->field)) {
+            ECerr(EC_F_EC_GFP_SIMPLE_BLIND_COORDINATES, ERR_R_BN_LIB);
+            goto err;
+        }
+    } while (BN_is_zero(lambda));
+
+    /* if field_encode defined convert between representations */
+    if (group->meth->field_encode != NULL
+        && !group->meth->field_encode(group, lambda, lambda, ctx))
+        goto err;
+    if (!group->meth->field_mul(group, p->Z, p->Z, lambda, ctx))
+        goto err;
+    if (!group->meth->field_sqr(group, temp, lambda, ctx))
+        goto err;
+    if (!group->meth->field_mul(group, p->X, p->X, temp, ctx))
+        goto err;
+    if (!group->meth->field_mul(group, temp, temp, lambda, ctx))
+        goto err;
+    if (!group->meth->field_mul(group, p->Y, p->Y, temp, ctx))
+        goto err;
+    p->Z_is_one = 0;
+
+    ret = 1;
+
+ err:
+     BN_CTX_end(ctx);
+     return ret;
 }

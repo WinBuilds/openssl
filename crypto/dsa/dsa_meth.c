@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The OpenSSL Project Authors. All Rights Reserved.
+ * Copyright 2016-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
  * Licensed under the OpenSSL license (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
@@ -132,7 +132,7 @@ int DSA_meth_set_sign_setup(DSA_METHOD *dsam,
 }
 
 int (*DSA_meth_get_verify(const DSA_METHOD *dsam))
-        (const unsigned char *, int , DSA_SIG *, DSA *)
+        (const unsigned char *, int, DSA_SIG *, DSA *)
 {
     return dsam->dsa_do_verify;
 }

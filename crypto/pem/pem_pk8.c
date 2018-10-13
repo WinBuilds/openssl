@@ -1,5 +1,5 @@
 /*
- * Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.
+ * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
  * Licensed under the OpenSSL license (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
@@ -183,7 +183,7 @@ static int do_pk8pkey_fp(FILE *fp, EVP_PKEY *x, int isder, int nid,
 
     if ((bp = BIO_new_fp(fp, BIO_NOCLOSE)) == NULL) {
         PEMerr(PEM_F_DO_PK8PKEY_FP, ERR_R_BUF_LIB);
-        return (0);
+        return 0;
     }
     ret = do_pk8pkey(bp, x, isder, nid, enc, kstr, klen, cb, u);
     BIO_free(bp);
