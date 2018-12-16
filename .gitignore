@@ -165,8 +165,6 @@ Makefile
 *.lib
 *.pdb
 *.ilk
-*.def
-*.rc
 *.res
 *.db
 
