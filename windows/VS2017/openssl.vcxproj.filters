@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\apps\app_rand.c" />
+    <ClCompile Include="..\..\apps\apps.c" />
+    <ClCompile Include="..\..\apps\asn1pars.c" />
+    <ClCompile Include="..\..\apps\bf_prefix.c" />
+    <ClCompile Include="..\..\apps\ca.c" />
+    <ClCompile Include="..\..\apps\ciphers.c" />
+    <ClCompile Include="..\..\apps\cms.c" />
+    <ClCompile Include="..\..\apps\crl.c" />
+    <ClCompile Include="..\..\apps\crl2p7.c" />
+    <ClCompile Include="..\..\apps\dgst.c" />
+    <ClCompile Include="..\..\apps\dhparam.c" />
+    <ClCompile Include="..\..\apps\dsa.c" />
+    <ClCompile Include="..\..\apps\dsaparam.c" />
+    <ClCompile Include="..\..\apps\ec.c" />
+    <ClCompile Include="..\..\apps\ecparam.c" />
+    <ClCompile Include="..\..\apps\enc.c" />
+    <ClCompile Include="..\..\apps\engine.c" />
+    <ClCompile Include="..\..\apps\errstr.c" />
+    <ClCompile Include="..\..\apps\gendsa.c" />
+    <ClCompile Include="..\..\apps\genpkey.c" />
+    <ClCompile Include="..\..\apps\genrsa.c" />
+    <ClCompile Include="..\..\apps\nseq.c" />
+    <ClCompile Include="..\..\apps\ocsp.c" />
+    <ClCompile Include="..\..\apps\openssl.c" />
+    <ClCompile Include="..\..\apps\opt.c" />
+    <ClCompile Include="..\..\apps\passwd.c" />
+    <ClCompile Include="..\..\apps\pkcs7.c" />
+    <ClCompile Include="..\..\apps\pkcs8.c" />
+    <ClCompile Include="..\..\apps\pkcs12.c" />
+    <ClCompile Include="..\..\apps\pkey.c" />
+    <ClCompile Include="..\..\apps\pkeyparam.c" />
+    <ClCompile Include="..\..\apps\pkeyutl.c" />
+    <ClCompile Include="..\..\apps\prime.c" />
+    <ClCompile Include="..\..\apps\rand.c" />
+    <ClCompile Include="..\..\apps\rehash.c" />
+    <ClCompile Include="..\..\apps\req.c" />
+    <ClCompile Include="..\..\apps\rsa.c" />
+    <ClCompile Include="..\..\apps\rsautl.c" />
+    <ClCompile Include="..\..\apps\s_cb.c" />
+    <ClCompile Include="..\..\apps\s_client.c" />
+    <ClCompile Include="..\..\apps\s_server.c" />
+    <ClCompile Include="..\..\apps\s_socket.c" />
+    <ClCompile Include="..\..\apps\s_time.c" />
+    <ClCompile Include="..\..\apps\sess_id.c" />
+    <ClCompile Include="..\..\apps\smime.c" />
+    <ClCompile Include="..\..\apps\speed.c" />
+    <ClCompile Include="..\..\apps\spkac.c" />
+    <ClCompile Include="..\..\apps\srp.c" />
+    <ClCompile Include="..\..\apps\storeutl.c" />
+    <ClCompile Include="..\..\apps\ts.c" />
+    <ClCompile Include="..\..\apps\verify.c" />
+    <ClCompile Include="..\..\apps\version.c" />
+    <ClCompile Include="..\..\apps\win32_init.c" />
+    <ClCompile Include="..\..\apps\x509.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\apps\apps.h" />
+    <ClInclude Include="..\..\apps\s_apps.h" />
+    <ClInclude Include="..\..\apps\testdsa.h" />
+    <ClInclude Include="..\..\apps\testrsa.h" />
+    <ClInclude Include="..\..\apps\timeouts.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\apps\tsget.in" />
+  </ItemGroup>
+</Project>
