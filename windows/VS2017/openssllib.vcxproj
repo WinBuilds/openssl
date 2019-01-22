@@ -72,20 +72,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -106,7 +106,7 @@
     <Lib>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -128,7 +128,7 @@
     <Lib>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -153,7 +153,7 @@
     <Lib>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -178,7 +178,7 @@
     <Lib>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <AdditionalDependencies>openssl_cryptolib.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>

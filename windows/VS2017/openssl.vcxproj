@@ -139,23 +139,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/bin/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/bin/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/bin/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/bin/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/bin/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/bin/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/bin/</OutDir>
-    <IntDir>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+    <OutDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/bin/</OutDir>
+    <IntDir>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -170,7 +170,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc15_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;Crypt32.lib;openssllib.lib;openssl_cryptolib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -187,7 +187,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc15_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;Crypt32.lib;openssllib.lib;openssl_cryptolib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -207,7 +207,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc15_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;Crypt32.lib;openssllib.lib;openssl_cryptolib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -227,7 +227,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc14_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectRoot)build_msvc15_$(Platform)/$(Configuration)/lib/;$(SolutionDir)../../../../build_msvc15_$(Platform)/$(Configuration)/bin/</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;Crypt32.lib;openssllib.lib;openssl_cryptolib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
